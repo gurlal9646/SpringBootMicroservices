@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "18970e19-2274-462e-a84f-bed9c84e04cc",
+		"name": "Assignment1Enterprise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11833071"
+	},
+	"item": [
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"name\": \"The Modern Era\",\r\n        \"author\": \"Gurlal Singh\",\r\n        \"availability\": \"available\",\r\n        \"rating\": 8.9\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiurl}}books/add",
+					"host": [
+						"{{apiurl}}books"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiurl}}books/list",
+					"host": [
+						"{{apiurl}}books"
+					],
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rani tat\",\r\n    \"author\": \"Gurlal Singh\",\r\n    \"availability\": \"available\",\r\n    \"rating\": 8.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiurl}}books/update/11",
+					"host": [
+						"{{apiurl}}books"
+					],
+					"path": [
+						"update",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{apiurl}}books/delete/11",
+					"host": [
+						"{{apiurl}}books"
+					],
+					"path": [
+						"delete",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrowServiceGetBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{borrowurl}}borrow/books",
+					"host": [
+						"{{borrowurl}}borrow"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookServiceUpdateStatus",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "BorrowServiceUpdateStatus",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
